@@ -1,0 +1,16 @@
+
+You selected <%=radio%>. </br>
+</br>
+Please enter two numbers to perform <%=radio%> on.
+</br>
+
+<form method= "post" action="/two_numbers">
+	<input type="hidden" name="first_name" value="first"/> </br>
+	<input type="hidden" name="last_name" value="last"/> </br>
+	<input type="hidden" name="password" value="pass"/> </br>
+	<input type="hidden" name="radio" value= <%=radio%> >
+	<input type = "number" name = "num1">
+	<input type = "number" name = "num2">
+	<input type  = "submit">
+</form>
+
