@@ -1,21 +1,30 @@
 
-def calc (function, num1, num2)
-	if function == "addition"
-		calc = num1 + num2 
+def calc (function, num_1, num_2)
 
-	elsif function == "subtract"
-		calc = num1 - num2
+	if function == "plus"
+		calc = num_1.to_f + num_2.to_f
 
-	elsif function == "multiply"
-		calc = num1 * num2
+	elsif function == "-"
+		calc = num_1.to_f - num_2.to_f
 
-	elsif function == "divide"
-		if num2 == 0
+	elsif function == "*"
+		calc = num_1.to_f * num_2.to_f
+
+	elsif function == "/"
+
+		if num_2 == 0
 			calc = "Does not exist."
 		else 
-			calc = num1 / num2
+			calc = num_1.to_f / num_2.to_f
 		end
+
 	else
+
 	end
-	calc.to_s
+
+	"%.2f" % calc.to_s
+	
+	# "%.2f" % allows you to limit your float to 2
+	# "%.3f" % allows you to limit your float to 3
+
 end 

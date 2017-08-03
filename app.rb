@@ -69,7 +69,8 @@ end
 	num_1 = params[:num_1]
 	num_2 = params[:num_2]
 	radio = params[:radio]
-	totalnumbers = calc(radio, num_1.to_i, num_2.to_i)
+	totalnumbers = calc(radio, num_1.to_f, num_2.to_f)
+
 redirect '/total?password=' + pass + '&first_name=' + first + '&last_name=' + last + '&radio=' + radio + '&num_1=' + num_1 + '&num_2=' + num_2 + '&totalnumbers=' + totalnumbers
 end 
 
@@ -83,4 +84,5 @@ get '/total' do
 	totalnumbers = params[:totalnumbers]
 	erb :total, :locals => {first:first, last:last, pass:pass, radio:radio, num_1:num_1, num_2:num_2, totalnumbers:totalnumbers}
 end 
+
 
